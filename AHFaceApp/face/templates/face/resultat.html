@@ -1,0 +1,49 @@
+{% extends 'face/home.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- CSS et JavaScript pour le chargement -->
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<script src="{% static 'js/home.js' %}"></script>
+
+<!-- En-tête -->
+<header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h3 class="site-heading my-4 mt-3 text-white"> Résultat de la détection</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% if prediction %}
+<!-- Contenu principal -->
+<div id="predictionResult" class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mb-4">
+              <div class="card-body text-center">
+                  <img id="imageD" class="rounded mx-auto d-block img-fluid" src="{{ image}}" style="max-width: 300px; max-height: 300px;" alt="Aperçu de l'image">
+                  <div class="alert alert-info alert-dismissible fade show mt-3" role="alert">
+                      L'émotion détectée sur ta photo est :<strong>{{ prediction }}</strong>.
+                  </div>
+                    <a href="{% url 'home' %}" class="btn btn-primary btn-lg mt-3">Recommencer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+<!-- JavaScript -->
+<script>
+    // Code JavaScript pour gérer le comportement de recommencer
+    document.getElementById('restartFormBtn').onclick = function() {
+        window.location.href = "{% url 'home' %}";
+    };
+</script>
+
+{% endblock content %}
