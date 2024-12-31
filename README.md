@@ -27,7 +27,7 @@ Ensure you have the following installed on your system:
 ### Step 1: Clone the Repository
 
 
-git clone https://github.com/yourusername/ahface.git
+git clone [https://github.com/yourusername/ahface.git](https://github.com/DHarley22/Emotion-Classification-Angry-Happy.git)
 cd ahface
 
 ### Step 2: Set Up a Virtual Environment
