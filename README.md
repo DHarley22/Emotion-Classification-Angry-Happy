@@ -4,6 +4,11 @@
 AHFace is a Django web application that allows users to upload a facial image and detect emotions such as **anger** (angry) and **happiness** (happy).
 
 ---
+## App Preview
+
+![App Screenshot](https://github.com/DHarley22/Emotion-Classification-Angry-Happy/raw/main/images/app.png)
+![App Detection](https://github.com/DHarley22/Emotion-Classification-Angry-Happy/raw/main/images/app2.png)
+
 
 ## Features
 
@@ -63,10 +68,7 @@ Open your web browser and go to:
 
 http://127.0.0.1:8000/face
 
-## App Preview
 
-![App Screenshot](https://github.com/DHarley22/Emotion-Classification-Angry-Happy/raw/main/images/app.png)
-![App Detection](https://github.com/DHarley22/Emotion-Classification-Angry-Happy/raw/main/images/app2.png)
 
 
 
